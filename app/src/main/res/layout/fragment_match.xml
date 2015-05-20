@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dsb="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matchScroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8.0dip">
+
+        <TextView
+            style="@style/AppTheme.Base.Match.Title"
+            android:text="Autonomous" />
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Starting Position" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/mhaOnFloor"
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Floor"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/mhaOnRamp"
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ramp" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Truth Values" />
+
+        <CheckBox
+            android:id="@+id/mhaGetsOffRamp"
+            style="@style/AppTheme.Base.Match.ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gets off the ramp" />
+
+        <CheckBox
+            android:id="@+id/mhaReleasesKickstand"
+            style="@style/AppTheme.Base.Match.ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kickstand is released" />
+
+        <CheckBox
+            android:id="@+id/mhaCenterGoal"
+            style="@style/AppTheme.Base.Match.ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Center goal is scored" />
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Goals In parking zone" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/mhaGoalsInParking"
+            style="@style/AppTheme.Base.Slider"
+            dsb:dsb_min="0"
+            dsb:dsb_max="3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Rolling Goals Scored" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/mhaGoalsScored"
+            style="@style/AppTheme.Base.Slider"
+            dsb:dsb_min="0"
+            dsb:dsb_max="3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/AppTheme.Base.Match.Title"
+            android:layout_marginTop="8.0dip"
+            android:text="Teleop" />
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Rolling Goals" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginTop="5.0dip">
+
+            <me.brandonbarker.ootbscouter.views.VerticalTextView
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="Low"/>
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/mhtLowRollingGoal"
+                style="@style/AppTheme.Base.Slider"
+                dsb:dsb_min="0"
+                dsb:dsb_max="100"
+                dsb:dsb_indicatorFormatter="%d%%"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <me.brandonbarker.ootbscouter.views.VerticalTextView
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="Med" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/mhtMedRollingGoal"
+                style="@style/AppTheme.Base.Slider"
+                dsb:dsb_min="0"
+                dsb:dsb_max="100"
+                dsb:dsb_indicatorFormatter="%d%%"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <me.brandonbarker.ootbscouter.views.VerticalTextView
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="High"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/mhtHighRollingGoal"
+                style="@style/AppTheme.Base.Slider"
+                dsb:dsb_min="0"
+                dsb:dsb_max="100"
+                dsb:dsb_indicatorFormatter="%d%%"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <me.brandonbarker.ootbscouter.views.VerticalTextView
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="Cent"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/mhtCentRollingGoal"
+                style="@style/AppTheme.Base.Slider"
+                dsb:dsb_min="0"
+                dsb:dsb_max="100"
+                dsb:dsb_indicatorFormatter="%d%%"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Goals In Parking Zone" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/mhtGoalsInParking"
+            style="@style/AppTheme.Base.Slider"
+            dsb:dsb_min="0"
+            dsb:dsb_max="3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Goals Off The Floor" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/mhtGoalsOffFloor"
+            style="@style/AppTheme.Base.Slider"
+            dsb:dsb_min="0"
+            dsb:dsb_max="3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/AppTheme.Base.Match.SubTitle"
+            android:text="Truth Values" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/mhtParkingZone"
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Robot in parking zone" />
+
+            <RadioButton
+                android:id="@+id/mhtOffFloor"
+                style="@style/AppTheme.Base.Match.ItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Robot off the floor" />
+        </RadioGroup>
+
+        <!--<TextView
+            style="@style/AppTheme.Base.Match.Title"
+            android:layout_marginTop="8.0dip"
+            android:text="Notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:spinnerMode="dropdown"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <com.gc.materialdesign.views.ButtonFloatSmall
+                android:id="@+id/addNoteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/accent"
+                materialdesign:iconDrawable="@drawable/ic_add_white"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/notes"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:layout_gravity="center_horizontal" />-->
+
+    </LinearLayout>
+</ScrollView>

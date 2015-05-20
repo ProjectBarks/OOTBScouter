@@ -1,0 +1,14 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">OOTB Scouter</string>
+    <string-array name="quick_notes">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>

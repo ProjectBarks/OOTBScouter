@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eventSwipe"
+    android:layout_width="fill_parent"
+    android:layout_height="70.0dip"
+    swipe:drag_edge="right"
+    swipe:show_mode="lay_down">
+
+    <LinearLayout
+        android:layout_width="160.0dip"
+        android:layout_height="fill_parent"
+        android:background="@color/background_secondary"
+        android:orientation="horizontal"
+        android:weightSum="3.0">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/eventDelete"
+            style="@style/AppTheme.Base.Lists.Ripple">
+
+            <ImageView
+                android:id="@+id/eventDeleteImage"
+                style="@style/AppTheme.Base.Lists.ImageRipple"
+                android:src="@drawable/ic_close_white_24dp" />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            android:id="@+id/eventRename"
+            style="@style/AppTheme.Base.Lists.Ripple">
+
+            <ImageView
+                android:id="@+id/eventRenameImage"
+                style="@style/AppTheme.Base.Lists.ImageRipple"
+                android:src="@drawable/ic_create_white_24dp" />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            android:id="@+id/eventExport"
+            style="@style/AppTheme.Base.Lists.Ripple">
+
+            <ImageView
+                android:id="@+id/eventExportImage"
+                style="@style/AppTheme.Base.Lists.ImageRipple"
+                android:src="@drawable/ic_publish_white_24dp" />
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_drag_edge"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10.0dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event name"
+                android:textColor="@color/primary_text"
+                android:textSize="22.0sp" />
+
+            <TextView
+                android:id="@+id/eventSubText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small Text"
+                android:textColor="@color/secondary_text" />
+        </LinearLayout>
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>
