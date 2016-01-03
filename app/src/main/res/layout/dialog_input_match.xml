@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Match Info"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/primary_text" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/team1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Team 1"
+            android:inputType="number"
+            android:layout_weight="1"
+            style="@style/AppTheme.Base.EditText" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/team2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Team 2"
+            android:inputType="number"
+            android:layout_weight="1"
+            style="@style/AppTheme.Base.EditText" />
+    </LinearLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/matchNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Match number"
+        android:inputType="number"
+        style="@style/AppTheme.Base.EditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alliance color"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/primary_text" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/matchRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textColor="@color/primary_text"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/matchBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textColor="@color/primary_text" />
+    </RadioGroup>
+</LinearLayout>
